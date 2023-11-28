@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #3498db;
+    --secondary-color: #0749f2;
+}
+header {
+    height: 20vmin; 
+}
+
+body {
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: powderblue;
+    font-family: "PT Sans", Calibri, Tahoma, sans-serif;
+}
+
+.container {
+    display: flex;
+   
+}
+
+.navigation {
+    width: 100pxpx;
+    background-color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 890px;
+    transition: background-color 0.3s ease-in-out;
+   
+}
+
+.navigation nav {
+    flex: 1;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li{
+    margin-bottom: 25vh;
+}
+
+.menu i {
+    font-size: 25px;
+    margin-right: 7px;
+}
+
+.intro {
+    flex: 1;
+    padding: 20px; 
+    text-align: left;
+}
+.intro p{
+    font-weight: 200;
+    font-size: x-large;
+    font-style: italic;
+}
+.intro pre{
+    font-size: large;
+}
+/* Media queries */
+@media only screen and (max-width: 640px) {
+    .menu li{
+        display: block;
+        margin: 5px 0; /* Adjust the margin as needed */
+    }
+    .navigation{
+        height: 150px;
+
+    }
+    .intro picture{
+        max-width: 100%;
+        height: auto;
+    }
+    .intro p{
+        font-size: 14px;
+
+        text-align: justify;
+    }
+}
+
+
