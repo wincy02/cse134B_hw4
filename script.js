@@ -1,7 +1,7 @@
 document.getElementById('contact_form').addEventListener('submit', function (event){
     event.preventDefault();
 
-    FileSystemDirectoryHandle('https://httpbin.org',{
+    fetch('https://httpbin.org',{
         method:"POST",
         body: new FormData(event.target),
     })
