@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Contact info</title>
-        <link rel="stylesheet" href="style.css"></style>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="contact-form.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             .popup{
@@ -136,21 +137,32 @@
     
             </section>
         
-            <div class="comment">
-               
-                <form>
-                    <label>First name:</label>
-                    <input type="text"> <br>
-                    <label>Last name: </label>
-                    <input type="text"><br><br>
+            <div class="form-window">
+                <span class="close-form" onclick="closewindow()">&times;</span>
+            
+                <form id="contact_form" action="https://httpbin.org" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
                 
-                    <textarea>You can leave a comment here </textarea>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
                 
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" required></textarea>
+                
+                    <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+                
+                    <output id="error" for="name email comments"></output>
+                    <output class="info" id="info_output"></output>
+                
+                    <button type="submit">Submit</button>
                 </form>
-                <button type="submit">Submit</button>
-            
+                
+                
             </div>
+            <script src="script.js"></script>
             
+                        
 
 
              
