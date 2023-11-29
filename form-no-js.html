@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Contact info</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="contact-form.css">
+        <link rel="stylesheet" href="form-no-js.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             .popup{
@@ -142,13 +142,13 @@
             
                 <form id="contact_form" action="https://httpbin.org/post" method="post">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" required pattern="[A-Za-z]" maxlength="50">
                 
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" >
+                    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
                 
                     <label for="comments">Comments:</label>
-                    <textarea id="comments" name="comments" ></textarea>
+                    <input id="comments" name="comments" required minlength="5" maxlength="500" pattern="^[a-zA-Z0-9.,!? ]*$">
                 
                     <input type="hidden" id="possible_bot" name="possible_bot" value="true">
                 
