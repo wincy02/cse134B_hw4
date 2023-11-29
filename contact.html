@@ -142,20 +142,22 @@
             
                 <form id="contact_form" action="https://httpbin.org/post" method="post">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" required >
                 
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" >
+                    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
                 
                     <label for="comments">Comments:</label>
-                    <textarea id="comments" name="comments" ></textarea>
+                    <textarea id="comments" name="comments" required></textarea>
                 
                     <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+                    <input type="hidden" id="form-errors" name="form-errors">
                 
                     <output id="error" for="name email comments"></output>
                     <output class="info" id="info_output"></output>
                 
-                    <button type="submit">Submit</button>
+                    <button onclick="submit_function()" type="submit">Submit</button>
+                   
                 </form>
                 
                 
@@ -167,6 +169,7 @@
              
         </div>
 
+        <script src="script.js"></script>
 
 
    

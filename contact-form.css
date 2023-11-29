@@ -41,3 +41,30 @@ output{
 output.info{
     color:green;
 }
+
+.fade-out{
+    animation: fadeOut 2s forwards;
+}
+
+
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.warning {
+    color: orange;
+}
