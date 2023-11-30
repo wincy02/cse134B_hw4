@@ -8,6 +8,11 @@
     </head>
     <body>
         <h1>Wincy Liang</h1>
+
+        <span id="switch">
+            <input type="checkbox" id="switch-input" class="switch-input">
+            <label for="switch-input" class="switch-label"></label>
+        </span>
         <section class="container">
             <section class="navigation">
                 <nav>
@@ -39,10 +44,15 @@
             </section>
 
             <section class="intro">
+
+         
                 <picture>
                     <source media="(max-width:640px)" srcset="tree.png">
                     <img src="pokemon.png" alt="pokemon" style="width:auto;">
                 </picture>
+               
+        
+        
         
                 <p>       
                     👨‍💻 Meet Wincy, a passionate and driven computer science 
@@ -67,10 +77,21 @@
     
             </section>
 
+           
+    
+
     
     
           
         </section>
+        <script>
+            document.querySelector("#switch-input").addEventListener("click",()=>{
+                document.body.classList.toggle("dark");
+                console.log("clicked");
+        });
+
+        </script>
+
 
     </body>
 </html>

@@ -8,6 +8,11 @@
     </head>
     <body>
         <h1><b>Project overview</b></h1>
+
+        <span id="switch">
+            <input type="checkbox" id="switch-input" class="switch-input">
+            <label for="switch-input" class="switch-label"></label>
+        </span>
         <section class="container">
             <section class="navigation">
                 <nav>
@@ -41,9 +46,18 @@
             </section>
             
     
-           
+       
+    
+     
         </section>
+        <script>
 
+        document.querySelector("#switch-input").addEventListener("click",()=>{
+            document.body.classList.toggle("dark");
+            console.log("clicked");
+        });
+            
+        </script>
    
 
     </body>

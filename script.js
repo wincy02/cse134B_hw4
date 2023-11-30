@@ -8,11 +8,15 @@ document.getElementById('contact_form').addEventListener('submit', function (eve
     const commentField = document.getElementById('comments');
     
 
-    validateName(nameField,form_errors);
-
+    //validateName(nameField,form_errors);
+    if(!nameField.checkValidity()){
+        form_errors.push({ field: 'name', message: nameField.validationMessage});
+        console.log("invalid name"); 
+    }
     if(!emailField.checkValidity()){
-        flashField(emailField);
+        //flashField(emailField);
         form_errors.push({ field: 'email', message: 'Invaild email address.' });
+        console.log("invalid email");
     }
 
     if(!commentField.checkValidity()){
@@ -117,3 +121,8 @@ function submitFormErrors(errors) {
     formErrorsInput.value = JSON.stringify(errors);
 }
  
+
+document.querySelector("#switch-input").addEventListener("click",()=>{
+    document.body.classList.toggle("dark");
+    console.log("clicked");
+});
