@@ -13,13 +13,14 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: powderblue;
+    --backgroud-main-color: rgb(176, 224, 230);
+    background-color: var(--backgroud-main-color);
     font-family: "PT Sans", Calibri, Tahoma, sans-serif;
 }
 
 body .dark{
-    background-color: rgb(37, 49, 50);
-    
+    --background-main-color:rgb(47, 59, 61);
+
 }
 
 
