@@ -13,14 +13,35 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    --backgroud-main-color: rgb(176, 224, 230);
-    background-color: var(--backgroud-main-color);
+    --background-main-color: rgb(176, 224, 230);
+    background-color: var(--background-main-color);
     font-family: "PT Sans", Calibri, Tahoma, sans-serif;
 }
 
-body .dark{
+/*color change in dark mode*/
+
+body.dark{
     --background-main-color:rgb(47, 59, 61);
 
+}
+body.dark h1{
+    color: #fff;
+}
+body.dark h2{
+    color: #fff;
+}
+
+body.dark p{
+    color: #fff;
+}
+body.dark label{
+    color: #fff;
+}
+body.dark pre{
+    color: #fff;
+}
+body.dark .courselist{
+    color: #fff;
 }
 
 
